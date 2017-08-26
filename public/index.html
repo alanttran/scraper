@@ -2,20 +2,25 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Scraping With Mongoose</title>
+    <title>Scraping Game News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      body { background-color: #F2F6D0 }
+      body { background: url("https://www.toptal.com/designers/subtlepatterns/patterns/gaming-pattern.png"); }
       #wrapper {
         width: 960px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 5%;
+        padding: 2% 50px 30px 50px;
+        background: rgba(255, 255, 255, 0.7);
+        border-right:1px solid gainsboro;
+        border-left:1px solid gainsboro;
+
       }
       #articles {
         display: inline-block;
         overflow: auto;
-        width: 60%;
-        height: 700px;
       }
       #notes {
         float: right;
@@ -25,6 +30,7 @@
         display: block;
         width: 100%;
         background-color: #FCF5C7;
+        margin-bottom: 8px;
       }
       input {
         height: 36px;
@@ -34,14 +40,18 @@
         height: 200px;
         font-size: 18px;
       }
+      .fa{
+        vertical-align: -2px;
+        font-size: 20px;
+
+      }
     </style>
   </head>
   <body>
     <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
+      <h1 class="title is-1">Scraper of Games</h1>
+     
+      <div id="articles"><img src="http://www.peacesoft.in/images/loader.gif" alt=""></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>

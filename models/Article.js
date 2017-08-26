@@ -5,15 +5,21 @@ var Schema = mongoose.Schema;
 
 // Create article schema
 var ArticleSchema = new Schema({
-  // title is a required string
   title: {
     type: String,
     required: true
   },
-  // link is a required string
   body: {
     type: String,
     required: true
+  },
+  link: {
+    type: String,
+    required: true
+  },
+  comment: {
+    type: Schema.Types.ObjectId,
+    ref: "Comment"
   }
 });
 
