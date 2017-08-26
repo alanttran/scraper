@@ -16,7 +16,7 @@ $.getJSON("/articles", function(data) {
             url: "/scrape"
 
         }).done(function() {
-            setTimeout(function() { location.reload(true); }, 5000);
+            //setTimeout(function() { location.reload(true); }, 5000);
 
         })
     }
