@@ -67,7 +67,7 @@ app.get("/scrape", (req, res) => {
 
             // Using our Article model, create a new entry
             // This effectively passes the result object to the entry (and the title and link)
-            var entry = new Article(result);
+            var entry = new Article(result); 
 
             // Now, save that entry to the db
             entry.save(function(err, doc) {
@@ -82,11 +82,9 @@ app.get("/scrape", (req, res) => {
             });
 
         });
+        
     });
-
-    // Tell the browser that we finished scraping the text
-    console.log("Scrape complete");
-    res.send("whee")
+    res.send("done");
 });
 
 // This will get the articles we scraped from the mongoDB
